@@ -29,11 +29,11 @@
 				<cloudHubDeployment>
 				<uri>https://anypoint.mulesoft.com</uri>
 				<muleVersion>${app.runtime}</muleVersion>
-				<username>${username}</username>
-				<password>${password}</password>
+				<username>sanjay7845</username>
+				<password>Classic_784</password>
 				<workerType>Micro</workerType>
-				<environment>Sandbox</environment>>
-				<applicationName>${project.name}</applicationName>
+				<environment>CloudHub</environment>>
+				<applicationName>continous-integration</applicationName>
 				<objectStoreV2>true</objectStoreV2>
 					<properties>
 					<env>${env}</env>
