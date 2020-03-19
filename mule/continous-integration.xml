@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="6992b2be-f231-4bf5-8d05-1c5862ae1ea5" >
+		<http:listener-connection host="0.0.0.0" port="8091" />
+	</http:listener-config>
+	<flow name="continous-integrationFlow" doc:id="f12d4b3d-55da-4991-a212-cd0bc892ab5c" >
+		<http:listener doc:name="Listener" doc:id="fc3a8fdc-29e3-4467-a91d-0dcaaef5a4ca" config-ref="HTTP_Listener_config" path="/testing"/>
+		<logger level="INFO" doc:name="Logger" doc:id="878ed7ca-c999-4b95-8d49-19c5952dd2fe" message="CI testing"/>
+		<set-payload value="Hello-World" doc:name="Set Payload" doc:id="e67d134c-943c-4d63-a28a-481d678c90f8" />
+	</flow>
+</mule>
