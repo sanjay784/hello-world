@@ -9,6 +9,7 @@
         see them in the mule_ee.log file. -->
 
     <Appenders>
+	    
         <RollingFile name="file" fileName="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}continous-integration.log" 
                  filePattern="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}continous-integration-%i.log">
             <PatternLayout pattern="%-5p %d [%t] [event: %X{correlationId}] %c: %m%n" />
